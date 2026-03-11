@@ -1,0 +1,57 @@
+/* Conteneur sticky */
+.navbar-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Barre principale */
+.navbar {
+  max-width: 1280px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2); /* noir avec alpha 50% */
+  border: 1px solid rgba(200, 200, 200, 0.3); /* ligne grise */
+  border-radius: 20px;
+  padding: 14px 32px; /* padding texte / bordure */
+  backdrop-filter: blur(12px); /* effet verre (classe 🔥) */
+}
+
+/* Liste */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Liens */
+.navbar-links li a {
+  color: #fff; /* blanc par défaut */
+  text-decoration: none; /* pas de soulignement */
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* nécessaire pour scale */
+}
+
+/* Liens visités */
+.navbar-links li a:visited {
+  color: #fff; /* reste blanc même après visite */
+}
+
+/* Couleur grise légère au repos (optionnel) */
+.navbar-links li a {
+  color: #f0f0f0; /* gris très clair */
+}
+
+/* Hover : léger changement de couleur et scale */
+.navbar-links li a:hover {
+  color: #6aa8ff; /* bleu léger */
+  transform: scale(1.05); /* léger zoom */
+}
